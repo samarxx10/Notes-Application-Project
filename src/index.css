@@ -1,1 +1,105 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* ── Quill: light mode ── */
+.ql-toolbar {
+  background-color: #f9fafb !important;
+  border: none !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.ql-toolbar .ql-stroke {
+  stroke: #6b7280;
+}
+
+.ql-toolbar .ql-fill {
+  fill: #6b7280;
+}
+
+.ql-toolbar button:hover .ql-stroke,
+.ql-toolbar button.ql-active .ql-stroke {
+  stroke: #111827;
+}
+
+.ql-toolbar button:hover .ql-fill,
+.ql-toolbar button.ql-active .ql-fill {
+  fill: #111827;
+}
+
+.ql-container {
+  background-color: #ffffff;
+  border: none !important;
+  min-height: 120px;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.ql-editor.ql-blank::before {
+  color: #9ca3af;
+  font-style: normal;
+}
+
+.ql-editor {
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ── Quill: dark mode ── */
+.dark .ql-toolbar {
+  background-color: #1f2937 !important;
+  border-bottom: 1px solid #374151 !important;
+}
+
+.dark .ql-toolbar .ql-stroke {
+  stroke: #9ca3af;
+}
+
+.dark .ql-toolbar .ql-fill {
+  fill: #9ca3af;
+}
+
+.dark .ql-toolbar button:hover .ql-stroke,
+.dark .ql-toolbar button.ql-active .ql-stroke {
+  stroke: #f3f4f6;
+}
+
+.dark .ql-toolbar button:hover .ql-fill,
+.dark .ql-toolbar button.ql-active .ql-fill {
+  fill: #f3f4f6;
+}
+
+.dark .ql-container {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+.dark .ql-editor.ql-blank::before {
+  color: #6b7280;
+}
+
+/* ── Note card rendered HTML ── */
+.quill-content p {
+  margin: 0;
+}
+
+.quill-content ul,
+.quill-content ol {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.quill-content strong {
+  font-weight: 700;
+}
+
+.quill-content em {
+  font-style: italic;
+}
+
+.dark .quill-content {
+  color: #d1d5db;
+}
+
+.dark .quill-content strong {
+  color: #f3f4f6;
+}
